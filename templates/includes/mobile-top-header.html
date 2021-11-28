@@ -38,13 +38,13 @@
         <div class="dropdown-menu border-0" aria-labelledby="user-options-m">
             {% if request.user.is_authenticated %}
                 {% if request.user.is_superuser %}
-                    <a href="" class="dropdown-item text-black">Management</a>
+                    <a href="{% url 'account_logout' %}" class="dropdown-item text-black">Management</a>
                 {% endif %}
                 <a href="" class="dropdown-item text-black">My Profile</a>
-                <a href="" class="dropdown-item text-black">Logout</a>
+                <a href="{% url 'account_logout' %}" class="dropdown-item text-black">Logout</a>
             {% else %}
-                <a href="" class="dropdown-item text-black">Register</a>
-                <a href="" class="dropdown-item text-black">Login</a>
+                <a href="{% url 'account_signup' %}" class="dropdown-item text-black">Register</a>
+                <a href="{% url 'account_login' %}" class="dropdown-item text-black">Login</a>
             {% endif %}
         </div>
     </li>
