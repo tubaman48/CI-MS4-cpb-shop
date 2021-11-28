@@ -3,10 +3,10 @@ html {
 }
 
 body {
-    background: url('/media/CP_Logo_working_Coloured_square.jpg') no-repeat center center fixed;
+    background-color: rgb(128, 32, 64);
     background-size: cover;
     height: calc(100vh - 164px);
-    color: #555;
+    color: rgb(199, 197, 71);
     font-family: 'Lato';
 }
 
@@ -79,6 +79,14 @@ body {
         z-index: 1030;
     }
 
+    .header-container {
+        padding-top: 225px;
+    }
+
+}
+
+/* slightly less padding-top for below medium */
+@media (min-width: 250px) {
     .header-container {
         padding-top: 164px;
     }
