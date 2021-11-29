@@ -1,0 +1,309 @@
+[{
+    "pk": 1, 
+    "model": "products.product", 
+    "fields": {
+        "sku": "pc0001099999", 
+        "name": "CPB Black Fleece with Black on White logo", 
+        "description": "Comfortable fleece in black with our logo in black on white. Available in XS, S, M, L, XL sizes.", 
+        "has_sizes": true,
+        "price": 18.99, 
+        "category": 1, 
+        "rating": 4.5, 
+        "image_url": "https://richardlovett.weebly.com/uploads/7/3/3/0/73301545/cpb-pc0001-fleece-blk-badge-bw_orig.jpeg", 
+        "image": "cpb-pc0001-fleece-blk-badge-bw.jpeg"
+    }
+}, {
+    "pk": 2, 
+    "model": "products.product", 
+    "fields": {
+        "sku": "pc0002099999", 
+        "name": "CPB Black Fleece with Colour logo", 
+        "description": "Comfortable fleece in black with our logo in colour. Available in XS, S, M, L, XL sizes.", 
+        "has_sizes": true,
+        "price": 18.99, 
+        "category": 1, 
+        "rating": 4.6, 
+        "image_url": "https://richardlovett.weebly.com/uploads/7/3/3/0/73301545/cpb-pc0002-fleece-blk-badge-col_orig.jpeg", 
+        "image": "cpb-pc0002-fleece-blk-badge-col.jpeg"
+    }
+}, {
+    "pk": 3,
+    "model": "products.product", 
+    "fields": {
+        "sku": "pc0003099999", 
+        "name": "CPB White T-Shirt with Black on White logo", 
+        "description": "Comfortable 100% cotton white t-shirt with our logo in black on white. Available in XS, S, M, L, XL sizes.", 
+        "has_sizes": true,
+        "price": 8.99, 
+        "category": 1, 
+        "rating": 4.6, 
+        "image_url": "https://richardlovett.weebly.com/uploads/7/3/3/0/73301545/cpb-pc0003-tee-wht-badge-bw_orig.jpeg", 
+        "image": "cpb-pc0003-tee-wht-badge-bw.jpeg"
+    }
+}, {
+    "pk": 4,
+    "model": "products.product", 
+    "fields": {
+        "sku": "pc0004099999", 
+        "name": "CPB White T-Shirt with Colour logo", 
+        "description": "Comfortable 100% cotton white t-shirt with our logo in colour. Available in XS, S, M, L, XL sizes.", 
+        "has_sizes": true,
+        "price": 9.99, 
+        "category": 1, 
+        "rating": 4.2, 
+        "image_url": "https://richardlovett.weebly.com/uploads/7/3/3/0/73301545/cpb-pc0004-tee-wht-badge-col_orig.jpeg", 
+        "image": "cpb-pc0004-tee-wht-badge-col.jpeg"
+    }
+}, {
+    "pk": 5,
+    "model": "products.product", 
+    "fields": {
+        "sku": "pc0005099999", 
+        "name": "CPB Concert Jacket", 
+        "description": "Full 'Mess-Style' band jacket in CPB red with our logo in embroidered yellow and white on black. Available in XS, S, M, L, XL sizes. Order lead time is 4-6 weeks.", 
+        "has_sizes": true,
+        "price": 205.50, 
+        "category": 1, 
+        "rating": 4.8, 
+        "image_url": "https://richardlovett.weebly.com/uploads/7/3/3/0/73301545/cpb-pc0005-concert-jacket_orig.jpeg", 
+        "image": "cpb-pc0005-concert-jacket.jpeg"
+    }
+}, {
+    "pk": 6,
+    "model": "products.product", 
+    "fields": {
+        "sku": "pc0006099999", 
+        "name": "CPB Black Outdoor Jacket with Black on White logo", 
+        "description": "Comfortable lined and waterproofed jacket for outdoors play in black with our logo in embroidered yellow and white on black. Available in XS, S, M, L, XL sizes.", 
+        "has_sizes": true,
+        "price": 33.49, 
+        "category": 1, 
+        "rating": 4.9, 
+        "image_url": "https://richardlovett.weebly.com/uploads/7/3/3/0/73301545/cpb-pc0006-outdoor-jacket_orig.jpeg", 
+        "image": "cpb-pc0006-outdoor-jacket.jpeg"
+    }
+}, {
+    "pk": 7,
+    "model": "products.product", 
+    "fields": {
+        "sku": "ph0001099999", 
+        "name": "CPB White Mug with Black on Beige logo", 
+        "description": "Ceramic mug in white with our logo in black on beige. Suitable for cleaning in dishwashers.", 
+        "has_sizes": false,
+        "price": 7.49, 
+        "category": 2, 
+        "rating": 4.5, 
+        "image_url": "https://richardlovett.weebly.com/uploads/7/3/3/0/73301545/cpb-ph0001-mug-wht-badge-bb_orig.jpeg", 
+        "image": "cpb-ph0001-mug-wht-badge-bb.jpeg"
+    }
+}, {
+    "pk": 8,
+    "model": "products.product", 
+    "fields": {
+        "sku": "ph0002099999", 
+        "name": "CPB White Mug with Black on White logo", 
+        "description": "Ceramic mug in white with our logo in black on white. Suitable for cleaning in dishwashers.", 
+        "has_sizes": false,
+        "price": 7.49, 
+        "category": 2, 
+        "rating": 4.5, 
+        "image_url": "https://richardlovett.weebly.com/uploads/7/3/3/0/73301545/cpb-ph0002-mug-wht-badge-bw_orig.jpeg", 
+        "image": "cpb-ph0002-mug-wht-badge-bw.jpeg"
+    }
+}, {
+    "pk": 9,
+    "model": "products.product", 
+    "fields": {
+        "sku": "ph0003099999", 
+        "name": "CPB White Mug with Colour logo", 
+        "description": "Ceramic mug in white with our logo in colour. Suitable for cleaning in dishwashers.", 
+        "has_sizes": false,
+        "price": 7.99, 
+        "category": 2, 
+        "rating": 4.5, 
+        "image_url": "https://richardlovett.weebly.com/uploads/7/3/3/0/73301545/cpb-ph0003-mug-wht-badge-col_orig.jpeg", 
+        "image": "cpb-ph0003-mug-wht-badge-col.jpeg"
+    }
+}, {
+    "pk": 10,
+    "model": "products.product", 
+    "fields": {
+        "sku": "ph0004099999", 
+        "name": "CPB Black Mug with Black on Beige logo", 
+        "description": "Ceramic mug in black with our logo in black on beige. Suitable for cleaning in dishwashers.", 
+        "has_sizes": false,
+        "price": 7.49, 
+        "category": 2, 
+        "rating": 4.4, 
+        "image_url": "https://richardlovett.weebly.com/uploads/7/3/3/0/73301545/cpb-ph0004-mug-blk-badge-bb_orig.jpeg", 
+        "image": "cpb-ph0004-mug-blk-badge-bb.jpeg"
+    }
+}, {
+    "pk": 11,
+    "model": "products.product", 
+    "fields": {
+        "sku": "ph0005099999", 
+        "name": "CPB Black Mug with Black on White logo", 
+        "description": "Ceramic mug in black with our logo in black on white. Suitable for cleaning in dishwashers.", 
+        "has_sizes": false,
+        "price": 7.49, 
+        "category": 2, 
+        "rating": 4.5, 
+        "image_url": "https://richardlovett.weebly.com/uploads/7/3/3/0/73301545/cpb-ph0005-mug-blk-badge-bw_orig.jpeg", 
+        "image": "cpb-ph0005-mug-blk-badge-bw.jpeg"
+    }
+}, {
+    "pk": 12,
+    "model": "products.product", 
+    "fields": {
+        "sku": "ph0006099999", 
+        "name": "CPB Black Mug with Colour logo", 
+        "description": "Ceramic mug in black with our logo in colour. Suitable for cleaning in dishwashers.", 
+        "has_sizes": false,
+        "price": 7.99, 
+        "category": 2, 
+        "rating": 4.5, 
+        "image_url": "https://richardlovett.weebly.com/uploads/7/3/3/0/73301545/cpb-ph0006-mug-blk-badge-col_orig.jpeg", 
+        "image": "cpb-ph0006-mug-blk-badge-col.jpeg"
+    }
+}, {
+    "pk": 13,
+    "model": "products.product", 
+    "fields": {
+        "sku": "ph0007099999", 
+        "name": "CPB Mocha Coffee Glass with Black on Beige logo", 
+        "description": "Clear glass with handle made for mocha style coffees with our logo in black on beige. Suitable for cleaning in dishwashers.", 
+        "has_sizes": false,
+        "price": 11.99, 
+        "category": 2, 
+        "rating": 4.5, 
+        "image_url": "https://richardlovett.weebly.com/uploads/7/3/3/0/73301545/cpb-ph0007-mochaglass-badge-bb_orig.jpeg", 
+        "image": "cpb-ph0007-mochaglass-badge-bb.jpeg"
+    }
+}, {
+    "pk": 14,
+    "model": "products.product", 
+    "fields": {
+        "sku": "ph0008099999", 
+        "name": "CPB Mocha Coffee Glass with Black on White logo", 
+        "description": "Clear glass with handle made for mocha style coffees with our logo in black on white. Suitable for cleaning in dishwashers.", 
+        "has_sizes": false,
+        "price": 11.99, 
+        "category": 2, 
+        "rating": 4.5, 
+        "image_url": "https://richardlovett.weebly.com/uploads/7/3/3/0/73301545/cpb-ph0008-mochaglass-badge-bw_orig.jpeg", 
+        "image": "cpb-ph0008-mochaglass-badge-bw.jpeg"
+    }
+}, {
+    "pk": 15,
+    "model": "products.product", 
+    "fields": {
+        "sku": "ph0009099999", 
+        "name": "CPB Mocha Coffee Glass with Colour logo", 
+        "description": "Clear glass with handle made for mocha style coffees with our logo in colout. Suitable for cleaning in dishwashers.", 
+        "has_sizes": false,
+        "price": 12.39, 
+        "category": 2, 
+        "rating": 4.5, 
+        "image_url": "https://richardlovett.weebly.com/uploads/7/3/3/0/73301545/cpb-ph0009-mochaglass-badge-col_orig.jpeg", 
+        "image": "cpb-ph0009-mochaglass-badge-col.jpeg"
+    }
+}, {
+    "pk": 16,
+    "model": "products.product", 
+    "fields": {
+        "sku": "ph0010099999", 
+        "name": "CPB Smoked Glass Mug with Black on Beige logo", 
+        "description": "Mug in smoked glass style with our logo in black on beige. Suitable for cleaning in dishwashers.", 
+        "has_sizes": false,
+        "price": 10.29, 
+        "category": 2, 
+        "rating": 4.5, 
+        "image_url": "https://richardlovett.weebly.com/uploads/7/3/3/0/73301545/cpb-ph0010-mug-smokedglass-badge-bb_orig.jpeg", 
+        "image": "cpb-ph0010-mug-smokedglass-badge-bb.jpeg"
+    }
+}, {
+    "pk": 17,
+    "model": "products.product", 
+    "fields": {
+        "sku": "ph0001199999", 
+        "name": "CPB Smoked Glass Mug with Black on White logo", 
+        "description": "Mug in smoked glass style with our logo in black on white. Suitable for cleaning in dishwashers.", 
+        "has_sizes": false,
+        "price": 10.29, 
+        "category": 2, 
+        "rating": 4.5, 
+        "image_url": "https://richardlovett.weebly.com/uploads/7/3/3/0/73301545/cpb-ph0011-mug-smokedglass-badge-bw_orig.jpeg", 
+        "image": "cpb-ph0011-mug-smokedglass-badge-bw.jpeg"
+    }
+}, {
+    "pk": 18,
+    "model": "products.product", 
+    "fields": {
+        "sku": "ph0001299999", 
+        "name": "CPB Smoked Glass Mug with Colour logo", 
+        "description": "Mug in smoked glass style with our logo in colour. Suitable for cleaning in dishwashers.", 
+        "has_sizes": false,
+        "price": 10.69, 
+        "category": 2, 
+        "rating": 4.5, 
+        "image_url": "https://richardlovett.weebly.com/uploads/7/3/3/0/73301545/cpb-ph0012--mug-smokedglass-badge-col_orig.jpeg", 
+        "image": "cpb-ph0012-mug-smokedglass-badge-col.jpeg"
+    }
+}, {
+    "pk": 19,
+    "model": "products.product", 
+    "fields": {
+        "sku": "ph0101099999", 
+        "name": "CPB Set of 6 Square Coasters with Black on Beige logo", 
+        "description": "These square cork-backed classic coasters with rounded corners come with our logo on top in black on beige.", 
+        "has_sizes": false,
+        "price": 9.99, 
+        "category": 2, 
+        "rating": 4.6, 
+        "image_url": "https://richardlovett.weebly.com/uploads/7/3/3/0/73301545/cpb-ph0101-square-coaster-bb_orig.jpeg", 
+        "image": "cpb-ph0101-square-coaster-bb.jpeg"
+    }
+}, {
+    "pk": 20,
+    "model": "products.product", 
+    "fields": {
+        "sku": "ph0102099999", 
+        "name": "CPB Set of 6 Round Coasters with Black on White logo", 
+        "description": "These round cork-backed classic coasters come with our logo on top in black on white.", 
+        "has_sizes": false,
+        "price": 9.99, 
+        "category": 2, 
+        "rating": 4.6, 
+        "image_url": "https://richardlovett.weebly.com/uploads/7/3/3/0/73301545/cpb-ph0102-round-coaster-bw_orig.jpeg", 
+        "image": "cpb-ph0102-round-coaster-bw.jpeg"
+    }
+}, {
+    "pk": 21,
+    "model": "products.product", 
+    "fields": {
+        "sku": "ph0103099999", 
+        "name": "CPB Set of 6 Square Coasters with Colour logo", 
+        "description": "These square cork-backed classic coasters with rounded corners come with our logo on top in colour.", 
+        "has_sizes": false,
+        "price": 10.49, 
+        "category": 2, 
+        "rating": 4.8, 
+        "image_url": "https://richardlovett.weebly.com/uploads/7/3/3/0/73301545/cpb-ph0103-square-coaster-col_orig.jpeg", 
+        "image": "cpb-ph0103-square-coaster-col.jpeg"
+    }
+}, {
+    "pk": 22,
+    "model": "products.product", 
+    "fields": {
+        "sku": "pm0001099999", 
+        "name": "It's Christmas! CD Feat.Wessex Male Voice Choir and Crystal Palace Band", 
+        "description": "A CD packed with 19 festive tracks - this was recorded back in 2011 as a joint venture between Wessex Male Voice Choir and Crystal Palace Band, with most of the proceeds from sales going support the charity Parkingson's UK.", 
+        "has_sizes": false,
+        "price": 10.99, 
+        "category": 3, 
+        "rating": 4.9, 
+        "image_url": "https://richardlovett.weebly.com/uploads/7/3/3/0/73301545/cpb-pm0001-cd-itsxmas-frontcover_orig.jpeg", 
+        "image": "cpb-pm0001-cd-itsxmas-frontcover.jpeg"
+    }
+}]
