@@ -8,7 +8,7 @@
 
         <li class="nav-item">
             <a class="font-weight-bold nav-link mr-5" href="">
-                T-shirts
+                Clothing
             </a>
         </li>
         
@@ -20,12 +20,12 @@
         
         <li class="nav-item">
             <a class="font-weight-bold nav-link mr-5" href="">
-                CDs
+                Music
             </a>
         </li>
 
         <li class="nav-item">
-            <a class="font-weight-bold nav-link mr-5" href="">
+            <a class="font-weight-bold nav-link mr-5" href="{% url 'products' %}">
                 All Merch
             </a>
         </li>
@@ -37,7 +37,7 @@
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                 <a href="" class="dropdown-item text-black">By Price</a>
                 <a href="" class="dropdown-item text-black">By Category</a>
-                <a href="" class="dropdown-item text-black">All Merch</a>
+                <a href="{% url 'products' %}" class="dropdown-item text-black">All Merch</a>
             </div>
         </li>
 
