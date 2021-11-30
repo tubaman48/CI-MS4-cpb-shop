@@ -21,7 +21,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-!llm(&xn0d_8ho*b1w6-1lmu$_=!f%(t#1o)qa19%#wwos=i@h'
+SECRET_KEY = 'django-insecure-!llm(&xn0d_8ho*b1w6-1lmu$_=!f%(t#1o)qa19'
+'%#wwos=i@h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -172,10 +173,14 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-#  Variables to calculate delivery costs in shopping bag
-
+# Variables to calculate delivery costs in shopping bag
 FREE_DELIVERY_THRESHOLD = 30
 STANDARD_DELIVERY_PERCENTAGE = 10
+
+# Stripe
+STRIPE_CURRENCY = 'gbp'
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
