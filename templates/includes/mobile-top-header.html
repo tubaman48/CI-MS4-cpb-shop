@@ -51,7 +51,7 @@
     <!-- To access the shopping bag -->
     <li class="list-inline-item cart-icon">
         <a class="{% if grand_total %}text-tag-dark font-weight-bold{% else %}text-yellow{% endif %} nav-link d-block d-lg-none"
-            href="">
+            href="{% url 'view_bag' %}">
             <div class="text-center">
                 <i class="fas fa-shopping-bag fa-lg"></i>
                 <p class="sr-only">Shopping bag</p>
