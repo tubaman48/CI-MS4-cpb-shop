@@ -1,0 +1,24 @@
+<footer class="fixed-bottom container-fluid pb-2 pt-2 border-top border-white bg-black text-center text-transform-none">
+    <div class="row">
+        <div class="col-12 col-md-4">
+            <a href="" class="margin-auto">Contact Us</a>
+        </div>
+        <div class="col-12 col-md-4">
+            <a href="" class="margin-auto">Upcoming Gigs</a>
+        </div>
+        <div class="col-12 col-md-4">
+            <p class="copyright margin-auto">Copyright &copy; Crystal Palace Band <span id="copyright"></span></p>
+        </div>
+    </div>
+</footer>
+
+{% block post_load_js %}
+    <script>
+        function copyrightYear() {
+            var d = new Date();
+            var y = d.getFullYear();
+            document.getElementById("copyright").innerHTML = y;
+        }
+        copyrightYear();
+    </script>
+{% endblock %}

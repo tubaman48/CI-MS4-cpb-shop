@@ -257,6 +257,23 @@ input[name='q']::placeholder {
 }
 
 
+/* -------------------------------- Footer */
+
+.footer-allowance {
+    height: 100px;
+}
+
+.socials-links {
+    font-size: 24px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.icon {
+    width: 48px;
+    height: 48px;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
