@@ -185,15 +185,8 @@ STRIPE_WH_SECRET = os.getenv('MS4_STRIPE_WH_SECRET', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 
 if 'DEVELOPMENT' in os.environ:
-    #    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-    #    DEFAULT_FROM_EMAIL = 'cpbshop@example.com'
-    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-    EMAIL_USE_TLS = True
-    EMAIL_PORT = 587
-    EMAIL_HOST = 'smtp.gmail.com'
-    EMAIL_HOST_USER = os.environ.get('MS4_EMAIL_HOST_USER')
-    EMAIL_HOST_PASSWORD = os.environ.get('MS4_EMAIL_HOST_PASS')
-    DEFAULT_FROM_EMAIL = os.environ.get('MS4_EMAIL_HOST_USER')
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    DEFAULT_FROM_EMAIL = 'cpbshop@example.com'
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_USE_TLS = True
