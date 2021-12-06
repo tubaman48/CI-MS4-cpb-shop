@@ -257,6 +257,22 @@ input[name='q']::placeholder {
 }
 
 
+/* -------------------------------- Images */
+
+.social-image {
+    height: 48px;
+    width: 48px;
+}
+
+.social-text {
+    padding-left: 15px;
+}
+
+.cpbflyer {
+    max-width: 300px;
+    width: 95%;
+}
+
 /* -------------------------------- Footer */
 
 .footer-allowance {

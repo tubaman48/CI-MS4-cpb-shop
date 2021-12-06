@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_meta %}
+    <!-- Metas -->
+    <meta name="description" content="Contact the brass band, Crystal Palace Band. Based in South London, you can also pick up their merchandise at any gig.">
+    <meta name="keywords" content="crystal, palace, brass, band,
+    contact, social, media, facebook, instagram, twitter, merch, shopping, music, merchandise, london">
+    <link rel="canonical" href="">
+    <!-- Facebook, LinkedIn, Google -->
+    <meta property="og:title" content="Crystal Palace Band" />
+    <meta property="og:description" content="Contact the brass band, Crystal Palace Band. Based in South London, you can also pick up their merchandise at any gig." />
+    <meta property="og:url" content="" />
+    <!-- Twitter -->
+    <meta name="twitter:title" content="Crystal Palace Band">
+    <meta name="twitter:description" content="Contact the brass band, Crystal Palace Band. Based in South London, you can also pick up their merchandise at any gig.">
+{% endblock %}
+
+{% block extra_title %}
+    Contact Us
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col">
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <section class="container mb-2">
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h2 class="mb-4">Contact Us</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 mt-2">
+                <p>Follow any of the below links to get in contact with us!</p>
+            </div>
+            <div class="col-12 col-sm-6 mt-2">
+                <a href="mailto:cpbdomain@gmail.com" target="_blank" rel="noopener" class="social-image" id="email" onmouseover="hover(this.id)" onmouseout="normal(this.id)">
+                    <i class="fas fa-envelope fa-2x social-icon"></i>
+                    <span class="social-text">Email</span>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 mt-3">
+                <a href="https://www.facebook.com/pages/Crystal-Palace-Band/101601993925" target="_blank" rel="noopener" class="social-image" id="facebook" onmouseover="hover(this.id)" onmouseout="normal(this.id)">
+                    <i class="fab fa-facebook fa-2x social-icon"></i>
+                    <span class="social-text">Facebook</span>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 mt-3">
+                <a href="https://www.instagram.com/CrystalPalace_Band/?hl=en" target="_blank" rel="noopener" class="social-image" id="instagram" onmouseover="hover(this.id)" onmouseout="normal(this.id)">
+                    <i class="fab fa-instagram fa-2x social-icon"></i>
+                    <span class="social-text">Instagram</span>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 mt-3">
+                <a href="https://twitter.com/CrystPalaceBand?lang=en" target="_blank" rel="noopener" class="social-image" id="twitter" onmouseover="hover(this.id)" onmouseout="normal(this.id)">
+                    <i class="fab fa-twitter fa-2x social-icon"></i>
+                    <span class="social-text">Twitter</span>
+                </a>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block post_load_js %}
+    {{ block.super }}
+
+{% endblock %}
