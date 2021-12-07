@@ -1,38 +1,38 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto pt-2">
         <li class="nav-item d-block d-lg-none">
-            <a class="font-weight-bold nav-link mr-5" href="{% url 'home' %}">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'home' %}">
                 Home
             </a>
         </li>
 
         <li class="nav-item">
-            <a class="font-weight-bold nav-link mr-5" href="{% url 'products' %}?category=clothing">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?category=clothing">
                 Clothing
             </a>
         </li>
         
         <li class="nav-item">
-            <a class="font-weight-bold nav-link mr-5" href="{% url 'products' %}?category=homeware"">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?category=homeware"">
                 Homeware
             </a>
         </li>
         
         <li class="nav-item">
-            <a class="font-weight-bold nav-link mr-5" href="{% url 'products' %}?category=music">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?category=music">
                 Music
             </a>
         </li>
 
         <li class="nav-item">
-            <a class="font-weight-bold nav-link mr-5" href="{% url 'products' %}?category=clothing,homeware,music">
-                All Merch
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?category=clothing,homeware,music">
+                All Merchandise
             </a>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="font-weight-bold nav-link mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                View Merch by...
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                View Merchandise by...
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
@@ -43,7 +43,7 @@
         </li>
 
         <li class="nav-item upcoming-gigs">
-            <a class="font-weight-bold nav-link mr-5" href="{% url 'view_gigs' %}">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'view_gigs' %}">
                 Upcoming Gigs
             </a>
         </li>
