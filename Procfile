@@ -1,0 +1,1 @@
+web: gunicorn cpb_shop.wsgi:application
