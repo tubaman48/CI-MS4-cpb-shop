@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_meta %}
+    <!-- Metas -->
+    <meta name="description" content="500 page on the merchandise site for the brass band, Crystal Palace Band. Based in South London, you can also pick up their merchandise at any gig.">
+    <meta name="keywords" content="crystal, palace, brass, band,
+    contact, social, media, facebook, instagram, twitter, merch, shopping, music, merchandise, london">
+    <link rel="canonical" href="https://ci-ms4-cpb-shop.herokuapp.com/">
+    <!-- Facebook, LinkedIn, Google -->
+    <meta property="og:title" content="Crystal Palace Band" />
+    <meta property="og:description" content="500 page on the merchandise site for the brass band, Crystal Palace Band. Based in South London, you can also pick up their merchandise at any gig." />
+    <meta property="og:url" content="https://ci-ms4-cpb-shop.herokuapp.com/" />
+    <!-- Twitter -->
+    <meta name="twitter:title" content="Crystal Palace Band 500">
+    <meta name="twitter:description" content="500 page on the merchandise site for the brass band, Crystal Palace Band. Based in South London, you can also pick up their merchandise at any gig.">
+{% endblock %}
+
+{% block extra_title %}
+    500
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <section class="container justify-content-center">
+        <div class="row">
+            <div class="col-12">
+                <hr>
+                <h1 class="mb-4 text-center">Error 500</h1>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6 offset-md-3 text-center">
+                <h2 class="mt-2 mb-4 text-danger">Internal Server Error</h2>
+                <p class="text-danger mb-2">Oops! - The server has encountered a situation that it does not know how to handle!</p>
+                <a href="/" class="btn btn-black">Click here to head back to safety!</a>
+                <a href="/">
+                    <img src="{{ MEDIA_URL }}CP-Logo-working-Coloured-square.jpg" alt="The Crystal Palace Band logo" class="w-50">
+                </a>
+            </div>
+        </div>
+    </section>
+{% endblock %}
