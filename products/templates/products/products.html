@@ -1,6 +1,25 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_meta %}
+    <!-- Metas -->
+    <meta name="description" content="All Products for the brass band, Crystal Palace Band. Based in South London, you can also pick up their merchandise at any gig.">
+    <meta name="keywords" content="crystal, palace, brass, band,
+    gigs, concerts, performance, gig, concert, performances, live, merch, shopping, music, merchandise, london">
+    <link rel="canonical" href="https://ci-ms4-cpb-shop.herokuapp.com/">
+    <!-- Facebook, LinkedIn, Google -->
+    <meta property="og:title" content="Crystal Palace Band" />
+    <meta property="og:description" content="All Products for the brass band, Crystal Palace Band. Based in South London, you can also pick up their merchandise at any gig." />
+    <meta property="og:url" content="https://ci-ms4-cpb-shop.herokuapp.com/" />
+    <!-- Twitter -->
+    <meta name="twitter:title" content="Crystal Palace Band">
+    <meta name="twitter:description" content="All Products for the brass band, Crystal Palace Band. Based in South London, you can also pick up their merchandise at any gig.">
+{% endblock %}
+
+{% block extra_title %}
+    All Products
+{% endblock %}
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
