@@ -7,7 +7,7 @@ class Category(models.Model):
     """ Category class model """
 
     class Meta:
-        """ Meta class for Product model """
+        """ Meta class for Category model """
         verbose_name_plural = 'Categories'
 
     name = models.CharField(
