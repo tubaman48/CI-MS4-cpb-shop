@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_meta %}
+    <!-- Metas -->
+    <meta name="description" content="Blog Details for the brass band, Crystal Palace Band. Based in South London, you can also pick up their merchandise at any gig.">
+    <meta name="keywords" content="crystal, palace, brass, band,
+    gigs, concerts, performance, gig, concert, performances, live, merch, shopping, music, merchandise, london">
+    <link rel="canonical" href="https://ci-ms4-cpb-shop.herokuapp.com/">
+    <!-- Facebook, LinkedIn, Google -->
+    <meta property="og:title" content="Crystal Palace Band" />
+    <meta property="og:description" content="Blog Details for the brass band, Crystal Palace Band. Based in South London, you can also pick up their merchandise at any gig." />
+    <meta property="og:url" content="https://ci-ms4-cpb-shop.herokuapp.com/" />
+    <!-- Twitter -->
+    <meta name="twitter:title" content="Crystal Palace Band">
+    <meta name="twitter:description" content="Blog Details for the brass band, Crystal Palace Band. Based in South London, you can also pick up their merchandise at any gig.">
+{% endblock %}
+
+{% block extra_title %}
+    Blog Details
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<!--- Post Detail --->
+<div class="container-fluid">
+    <div class="row mt-5 py-2">
+        <div class="col-sm-10 offset-sm-1 col-md-5 offset-md-2">
+            <h3 class="text-center">{{ post.title}}</h3>
+        </div>
+        <div class="col-sm-10 offset-sm-1 col-md-3 offset-md-0">
+            <small><strong>Posted on: </strong>{{ post.date_added | date:"d M - Y - h:i  "}}</small>
+            {% if request.user.is_superuser %}
+                <span><small class="ml-3">
+                <a href="{% url 'edit_post' post.slug %}">| Edit</a> |
+                <a class="text-danger" href="{% url 'delete_post' post.slug %}">Delete</a></small>
+                </span>
+            {% endif %}
+        </div>
+        
+    </div>
+    <div class="row px-5 py-3">
+        <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+            {% if post.image %}
+            <a href="{% url 'post_detail' post.slug %}">
+                <img class="card-img-top img-fluid" src="{{ post.image.url }}" alt="{{ post.title }}">
+            </a>
+            {% else %}
+            <a href="{% url 'post_detail' post.slug %}">
+                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }}">
+            </a>
+            {% endif %}
+        </div>    
+    </div>
+    <div class="row py-1">
+        <div class=" col-sm-10 offset-sm-1 col-md-8 offset-md-2">
+           <p class="about-text text-white">{{ post.intro }}</p> 
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2 blog-article text-white">
+            <p>{{ post.article|linebreaks }}</p>
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2 shop-now-button text-centre">
+            <h4>
+                <a href="{% url 'blog' %}" class="rounded-0 text-uppercase py-3">View All Blogs</a>
+            </h4>
+        </div>
+    </div>
+    
+    <!--- Comment Section--->
+    <div class="row pt-4 pb-2">
+        <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2">
+            <h3 class="comment-heading">Comments</h3>
+        </div>
+    </div>
+    <div class="row pt-2">
+        <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2">
+            {% for comment in post.comments.all %}
+            <article class="article-comment">
+                <strong>{{ comment.name }} - {{ comment.date_added | date:"d M - Y - h:i "}}</strong><br>
+                {{ comment.comment_desc}}
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="row py-2">
+        <div class="ccol-sm-10 offset-sm-1 col-md-8 offset-md-2">
+            <hr class="line">
+        </div>
+    </div>
+    <div class="row pb-4">
+        <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2">
+            <h4 class="add-comment">Add A Comment</h4>
+        </div>
+    </div>
+    <div class="row pb-4">
+        <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2">
+            <form method="post" action=".">
+                {% csrf_token %}
+                {{ form | crispy }}
+                <input type="submit" class="cta-white cta-comment" value="Add comment">
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

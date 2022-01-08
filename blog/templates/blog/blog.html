@@ -1,0 +1,150 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_meta %}
+    <!-- Metas -->
+    <meta name="description" content="All Blogs for the brass band, Crystal Palace Band. Based in South London, you can also pick up their merchandise at any gig.">
+    <meta name="keywords" content="crystal, palace, brass, band, blog,
+    gigs, concerts, performance, gig, concert, performances, live, merch, shopping, music, merchandise, london">
+    <link rel="canonical" href="https://ci-ms4-cpb-shop.herokuapp.com/">
+    <!-- Facebook, LinkedIn, Google -->
+    <meta property="og:title" content="Crystal Palace Band" />
+    <meta property="og:description" content="All Blogs for the brass band, Crystal Palace Band. Based in South London, you can also pick up their merchandise at any gig." />
+    <meta property="og:url" content="https://ci-ms4-cpb-shop.herokuapp.com/" />
+    <!-- Twitter -->
+    <meta name="twitter:title" content="Crystal Palace Band">
+    <meta name="twitter:description" content="All Blogs for the brass band, Crystal Palace Band. Based in South London, you can also pick up their merchandise at any gig.">
+{% endblock %}
+
+{% block extra_title %}
+    Blogs
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center mt-3">
+                <h2 class="logo-font">Blogs</h2>
+                <hr class="w-50 mb-1">
+            </div>
+        </div>
+
+        <!--- To display all the Posts available --->
+        <div class="posts">
+            {% if post_count == 1 %}
+                <p class="text-right"><strong>{{ post_count }}</strong> Post Available</p>
+            {% else %}
+                <p class="text-right"><strong>{{ post_count }}</strong> Posts Available</p>
+            {% endif %}
+            <div class="row">
+            {% for post in posts %}
+                {% if posts %}
+                    <div class="col-sm-8 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card h-100 border-0">
+                            {% if post.image %}
+                            <a href="{% url 'post_detail' post.slug %}">
+                                <img class="card-img-top img-fluid h-75 w-75" src="{{ post.image.url }}" alt="{{ post.title }}">
+                            </a>
+                            {% else %}
+                            <a href="{% url 'post_detail' post.slug %}">
+                                <img class="card-img-top img-fluid h-75 w-75" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }}">
+                            </a>
+                            {% endif %} 
+                            <div class="card-body pb-0">
+                                <h3 class="blog-title mt-3">{{ post.title }}</h3>
+                                <div class="text-muted">{{ post.date_added | date:"d M - Y | h:i"}}</div>
+                                <article class="review-desc text-muted">{{ post.intro }}</article>
+                                <a href="{% url 'post_detail'  post.slug %}" class="cta-button blog-btn">Read more...</a>
+                            </div>
+                            <div class="card-footer bg-white pt-0 border-0 text-left">
+                                <div class="row">
+                                    <div class="col">
+                                        {% if request.user.is_superuser %}
+                                            <small class="ml-3">
+                                                <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                                                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                            </small>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>                        
+                        </div>
+                    </div>
+
+                    {% if forloop.counter|divisibleby:1 %}
+                        <div class="col-12 d-sm-none mb-5">
+                            <hr>
+                        </div>
+                    {% endif %}                        
+                    {% if forloop.counter|divisibleby:2 %}
+                        <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                            <hr>
+                        </div>
+                    {% endif %}
+                    {% if forloop.counter|divisibleby:3 %}
+                        <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                            <hr>
+                        </div>
+                    {% endif %}
+                    {% if forloop.counter|divisibleby:4 %}
+                        <div class="col-12 d-none d-xl-block mb-5">
+                            <hr>
+                        </div>
+                    {% endif %}
+                {% else %}
+                    <div class="row">
+                        <div class="col-8 offset-2">
+                            <h2> No Posts Available</h2>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="btt-button shadow-sm rounded-0 border border-black">
+        <a class="btt-link d-flex h-100">
+            <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+        </a>	
+    </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+		$('.btt-link').click(function(e) {
+			window.scrollTo(0,0)
+		})
+	</script>
+
+    <script type="text/javascript">
+        $('#sort-selector').change(function() {
+            var selector = $(this);
+            var currentUrl = new URL(window.location);
+
+            var selectedVal = selector.val();
+            if(selectedVal != "reset"){
+                var sort = selectedVal.split("_")[0];
+                var direction = selectedVal.split("_")[1];
+
+                currentUrl.searchParams.set("sort", sort);
+                currentUrl.searchParams.set("direction", direction);
+
+                window.location.replace(currentUrl);
+            } else {
+                currentUrl.searchParams.delete("sort");
+                currentUrl.searchParams.delete("direction");
+
+                window.location.replace(currentUrl);
+            }
+        })
+    </script>
+{% endblock %} 
