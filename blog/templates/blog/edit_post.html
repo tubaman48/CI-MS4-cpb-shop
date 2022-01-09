@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_meta %}
+    <!-- Metas -->
+    <meta name="description" content="Blog Edit for the brass band, Crystal Palace Band. Based in South London, you can also pick up their merchandise at any gig.">
+    <meta name="keywords" content="crystal, palace, brass, band,
+    gigs, concerts, performance, gig, concert, performances, live, merch, shopping, music, merchandise, london">
+    <link rel="canonical" href="https://ci-ms4-cpb-shop.herokuapp.com/">
+    <!-- Facebook, LinkedIn, Google -->
+    <meta property="og:title" content="Crystal Palace Band" />
+    <meta property="og:description" content="Blog Edit for the brass band, Crystal Palace Band. Based in South London, you can also pick up their merchandise at any gig." />
+    <meta property="og:url" content="https://ci-ms4-cpb-shop.herokuapp.com/" />
+    <!-- Twitter -->
+    <meta name="twitter:title" content="Crystal Palace Band">
+    <meta name="twitter:description" content="Blog Edit for the brass band, Crystal Palace Band. Based in South London, you can also pick up their merchandise at any gig.">
+{% endblock %}
+
+{% block extra_title %}
+    Edit Blog Post
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <!-- Edit Post header  -->
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <hr>
+            <h2 class="logo-font mb-4">Blog Management</h2>
+            <h5 class="text-white">Edit Blog Post</h5>
+            <hr>
+        </div>
+    </div>
+
+    <!-- Edit Post form -->
+    <div class="row">
+        <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2 p-5 form-bg">
+            <div class="edit-blog-form">
+                <form class="mt-3" action="{% url 'edit_post' post.slug %}" method="POST" enctype="multipart/form-data"
+                    id="edit-blog-form">
+                    {% csrf_token %}
+                    {% for field in form %}
+                        {% if field.name != 'image' %}
+                            {{ field | as_crispy_field }}
+                        {% else %}
+                            {{ field }}
+                        {% endif %}
+                    {% endfor %}
+                    <div class="mt-5 mb-5">
+                        <button class="btn btn-dark rounded-0 ml-5" type="submit">Update Post</button>
+                        <a class="btn btn-danger rounded-0 ml-5" href="{% url 'blog' %}">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
