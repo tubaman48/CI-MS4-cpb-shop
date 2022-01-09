@@ -79,6 +79,9 @@
                     <p class="mb-0 small font-weight-bold">Posted by : {{ review.username }}</p>
                     <p class="mb-0 small">First posted on : {{ review.firstcreated }}</p>
                     <p class="small">Last edited on : {{ review.lastedited }}</p>
+                    {% if request.user.is_superuser or review.username == request.user %}
+                    <a href="{% url 'edit_review' review.id %}" class="btn-black btn-sm rounded-0">Edit review</a>
+                    {% endif %}
                 </div>
             </div>
             <hr class="w-50">
@@ -99,8 +102,6 @@
     $('.btt-link').click(function (e) {
         window.scrollTo(0, 0)
     })
-
-    var delete_id = -1;
 
     $('#sort-selector').change(function () {
         var selector = $(this);
