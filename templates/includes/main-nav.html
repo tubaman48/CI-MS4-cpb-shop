@@ -53,5 +53,17 @@
                 Blogs
             </a>
         </li>
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mx-5" href="#" id="reviews-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Reviews
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="reviews-link">
+                <a href="{% url 'reviews' %}" class="dropdown-item">All Reviews</a>
+                <a href="{% url 'reviews' %}?sort=username&direction=asc" class="dropdown-item">Sort by Author</a>
+                <a href="{% url 'reviews' %}?sort=product&direction=asc" class="dropdown-item">Sort by Product</a>
+                <a href="{% url 'reviews' %}?sort=firstcreated&direction=desc" class="dropdown-item">Sort by Date Posted</a>
+                
+            </div>
+        </li>
     </ul>
 </div>
