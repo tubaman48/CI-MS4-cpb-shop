@@ -31,10 +31,18 @@
                             class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                             <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...
                             </option>
-                            <option value="username_asc" {% if current_sorting == 'username_asc' %}selected{% endif %}>
-                                Author (A-Z)</option>
+                            <option value="username_asc"
+                                {% if current_sorting == 'username_asc' %}selected{% endif %}>Author (A-Z)
+                            </option>
                             <option value="username_desc"
-                                {% if current_sorting == 'username_desc' %}selected{% endif %}>Author (Z-A)</option>
+                                {% if current_sorting == 'username_desc' %}selected{% endif %}>Author (Z-A)
+                            </option>
+                            <option value="category_asc"
+                                {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)
+                            </option>
+                            <option value="category_desc"
+                                {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)
+                            </option>
                             <option value="product_asc"
                                 {% if current_sorting == 'product_asc' %}selected{% endif %}>Product (A-Z)
                             </option>
@@ -43,10 +51,12 @@
                             </option>
                             <option value="firstcreated_asc"
                                 {% if current_sorting == 'firstcreated_asc' %}selected{% endif %}>Date Posted
-                                (oldest-newest)</option>
+                                (oldest-newest)
+                            </option>
                             <option value="firstcreated_desc"
                                 {% if current_sorting == 'firstcreated_desc' %}selected{% endif %}>Date Posted
-                                (newest-oldest)</option>
+                                (newest-oldest)
+                            </option>
                         </select>
                     </div>
                 </div>

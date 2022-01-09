@@ -48,6 +48,7 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="reviews-link">
                 <a href="{% url 'reviews' %}?sort=username&direction=asc" class="dropdown-item">Sort by Author</a>
+                <a href="{% url 'reviews' %}?sort=category&direction=asc" class="dropdown-item">Sort by Category</a>
                 <a href="{% url 'reviews' %}?sort=product&direction=asc" class="dropdown-item">Sort by Product</a>
                 <a href="{% url 'reviews' %}?sort=firstcreated&direction=desc" class="dropdown-item">Sort by Date Posted</a>
                 <a href="{% url 'reviews' %}" class="dropdown-item" text-black>All Reviews</a>
