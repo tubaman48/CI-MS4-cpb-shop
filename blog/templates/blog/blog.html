@@ -60,7 +60,7 @@
                             {% endif %} 
                             <div class="card-body pb-0">
                                 <h3 class="blog-title mt-3">{{ post.title }}</h3>
-                                <div class="text-muted">{{ post.date_added | date:"d M - Y | h:i"}}</div>
+                                <div class="text-muted">{{ post.date_added }}</div>
                                 <article class="review-desc text-muted">{{ post.intro }}</article>
                                 <a href="{% url 'post_detail' post.slug %}" class="cta-button blog-btn">Read more...</a>
                             </div>
