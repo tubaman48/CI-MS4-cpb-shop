@@ -105,3 +105,16 @@ def edit_review(request, review_id):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def delete_review(request, review_id):
+    """The view to delete a review from the site"""
+    review = get_object_or_404(Review, pk=review_id)
+    if request.user.is_superuser or review.username == request.user:
+        review.delete()
+        messages.success(request, 'That review has been deleted!')
+        return redirect(reverse('reviews'))
+
+    messages.error(request, 'Sorry, only approved users can do this.')
+    return redirect(reverse('home'))
