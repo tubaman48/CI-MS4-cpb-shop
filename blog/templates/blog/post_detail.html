@@ -36,7 +36,7 @@
             <h3 class="text-center">{{ post.title}}</h3>
         </div>
         <div class="col-sm-10 offset-sm-1 col-md-3 offset-md-0">
-            <small><strong>Posted on: </strong>{{ post.date_added | date:"d M - Y - h:i  "}}</small>
+            <small><strong>Posted on: </strong>{{ post.date_added }}</small>
             {% if request.user.is_superuser %}
                 <span><small class="ml-3">
                 <a href="{% url 'edit_post' post.slug %}">| Edit</a> |
@@ -87,7 +87,7 @@
         <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2">
             {% for comment in post.comments.all %}
             <article class="article-comment">
-                <strong>{{ comment.name }} - {{ comment.date_added | date:"d M - Y - h:i "}}</strong><br>
+                <strong>{{ comment.name }} - {{ comment.date_added }}</strong><br>
                 {{ comment.comment_desc}}
             </article>
             {% endfor %}
