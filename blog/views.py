@@ -111,4 +111,4 @@ def delete_post(request, slug):
     post = get_object_or_404(Post, slug=slug)
     post.delete()
     messages.success(request, 'post deleted!')
-    return redirect(reverse('post_detail'))
+    return redirect(reverse('blog'))
