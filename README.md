@@ -1,6 +1,6 @@
 # CPB Shop Website
 
-![Image](/static/images/logos/ConcertProgrammeBuilder_icon_450x450.svg)
+![Image](/media/CP-Logo-working-Coloured-square-300x300.jpg)
 
 [View the live project here.](https://ci-ms4-cpb-shop.herokuapp.com)
 
@@ -12,7 +12,7 @@
 -   Passing consumers who wish to purchase without registering for a profile
 -   More regular consumers who by registering via a profile will save time on reentering personal details and will be able to see their order history
 
-![Image](/static/images/CI-MS4-CPB-Shop_mock_up.png)
+![Image](/static/docs/img/CI-MS4-CPB-Shop_mock_up.png)
 
 ---
 
@@ -321,10 +321,15 @@ The navigation bar changes depending on user status and screen size:
 
 # Database
 
-> MongoDB's non-relational database structure was ideal for this site as there were very few relationships between the collections on the site.
-> Below are the definitions of the collections used within my database:
+> The database schema for this project is diagrammed below :
 
+![image](static/docs/img/CI-MS4-CPB-SHOP_Database_Schema.png)
 
+> - The early development of it utilised SQLite within a local host environment (this excluded the custom models developed later for the Blog and Review functionality).
+> - The core apps of bag, checkout, product, and profile) are largely a reuse of the functionality provided in the CI LMS sample project Boutique Ado.
+> - The reviews app uses a custom model that utilises a single Review class which ties into the allauth UserProfile class.
+> - The blog app uses a custom model that links together the Blog, Post & Comments classes.
+> - The whole schema was finally deployed within a POSTGres relational database structure accessible from both the local host server and the live Heroku environment.
 
 ---
 
@@ -341,6 +346,9 @@ The navigation bar changes depending on user status and screen size:
 > - [Python3](https://www.python.org/)
 
 ## 2. Frameworks and Libraries Used
+
+> - [Django]
+> 
 
 > - [Flask](https://flask.palletsprojects.com/en/1.1.x/)
 > - [Flask-PyMongo](https://pypi.org/project/Flask-PyMongo/)
