@@ -1,7 +1,7 @@
 """ Review forms """
 
 from django import forms
-from .models import Review
+from . models import Review
 
 
 class ReviewForm(forms.ModelForm):
@@ -14,5 +14,5 @@ class ReviewForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        for field in self.fields.items():
-            field.widget.attrs['class'] = 'border-black rounded-0'
+        for field in self.fields:
+            self.fields[field].widget.attrs['class'] = 'border-black rounded-0'

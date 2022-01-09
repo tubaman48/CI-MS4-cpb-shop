@@ -1,8 +1,11 @@
 """ Views for reviews app """
 
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse
+from django.contrib import messages
 from django.db.models.functions import Lower
+from django.contrib.auth.decorators import login_required
 from .models import Review
+from .forms import ReviewForm
 
 
 def all_reviews(request):
@@ -36,3 +39,34 @@ def all_reviews(request):
     }
 
     return render(request, 'reviews/reviews.html', context)
+
+
+@login_required
+def add_review(request):
+    """The view to add a review to the site"""
+
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.username = request.user
+            review.save()
+            messages.success(request, 'You added a new review!')
+            return redirect(
+                reverse('reviews')
+                )
+
+        else:
+            messages.error(
+                request, 'This review was not added. ' +
+                'Please check the form is valid.'
+                )
+    else:
+        form = ReviewForm()
+
+    template = 'reviews/add_review.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
