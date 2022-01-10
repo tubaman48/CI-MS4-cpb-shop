@@ -78,7 +78,7 @@ The priority focus is on ease of use by the different types of user and a good U
 - ## 0. User Stories
 
 The following user stories remain in the scope of the final project delivered :
-> - _"As a customer I wish to be able to view all merchandise available without any kind of filtering."_
+> - _"As a customer I wish to be able to view all merchandise available without any kind of filtering"_
 > - _"As a customer I wish to be able to view merchandise filtered by categories of clothing, homeware, and music"_
 > - _"As a customer I wish to be able to view merchandise filtered by a search function"_
 > - _"As a customer I wish to be able to view merchandise ordered on price either listing on the cheapest or most expensive first"_
@@ -88,15 +88,19 @@ The following user stories remain in the scope of the final project delivered :
 > - _"As a customer I wish to be able to select from a range of sizes for clothing items"_
 > - _"As a customer I wish to be able to easily add items to / remove items from a virtual shopping bag"_
 > - _"As a customer I wish to be able to easily change the quantity of individual items in the virtual shopping bag"_
-> - _"As a customer I wish to be able to see the total cost of the items in the virtual shopping bag, with that value being automatically updated when the contents of the shopping bag are altered."_
-> - _"As a customer I wish to be able to automatically receive an email copy of my order at the time it is placed.."_
+> - _"As a customer I wish to be able to see the total cost of the items in the virtual shopping bag, with that value being automatically updated when the contents of the shopping bag are altered"_
+> - _"As a customer I wish to be able to automatically receive an email copy of my order at the time it is placed"_
 > - _"As a customer I wish to be able to view, select and order merchandise regardless of whether or not I'm logged into a personal profile"_
 > - _"As a customer I wish to be able to register a profile by secure access which maintains my personal details and order history"_
 > - _"As a customer I wish my email to be verified when I set up a profile to prove the integrity of the email address provided"_
 > - _"As a customer I wish my login password to be stored in encrypted form and only known to me"_
 
-> - _"As a store admin I wish to be able to add/alter/delete product entries including the pricing, category, rating and images for those products."_
+> - _"As a store admin I wish to be able to add/alter/delete product entries including the pricing, category, rating and images for those products"_
+> - _"As a store admin I wish to be able to add/alter/delete blog entries used to promote the merchandise"_
 > - _"As a user of this resource (in any capacity) I would like a responsive design that caters for mobile and non-mobile devices"_
+> - _"As a registered user of this resource I would like to be able to provide a review of products and be able to edit and delete my own reviews"
+> - _"As a user of this resource (in any capacity) I would like to see reviews made by other users"_
+> - _"As a user of this resource (in any capacity) I would like to be able to provide comments to blog entries"_
 
 The following user stories were descoped early on in the project due to time constraints :
 > - _"As a store admin I would like to be able to maintain real time stock control levels based on orders yet to be fulfilled"_
@@ -136,10 +140,12 @@ The following user stories were descoped early on in the project due to time con
 - ## 4. Skeleton
 
 > - Wireframes available [here](/static/docs/RLs-CI-MS4-Wireframes.pdf).
-> - A multi page website using Flask to route to the appropriate template page, dependent on the options selected made up of the following pages :
+> - A multi page website using Django to route to the appropriate app and its associated template pages, dependent on the options selected made up of the following pages :
 > -  The Home page provides a textual introduction to the site.
 > -  The Products page presents a summary list of merchandise available with a search facility based on the Product name or description. Additional edit capabilities are provided only to superusers for integrity purposes.
 > -  The Product Details page provides the name, description, category, rating and (where applicable) the sizes of the merchandise item.
+> -  The Blogs page presents a summary list of blog entries for all users to view. Within each blog entry there is the ability for users to provide comments.
+> -  The Reviews page presents a summary list of user reviews of products, with registered users being able to add a new review from there.
 > -  The Login / Register page.
 > -  The User Admin page (only accessible to the User Admin) for the creation, display, search, update and delete of user profiles.
 >
@@ -156,8 +162,8 @@ The following user stories were descoped early on in the project due to time con
 > The colour scheme is based around the "Crystal Palace Band" red jackets with the white and yellow on black band badges.
 > For the home page the red has been used for the body background colour for the band badge logo to blend into with text in yellow.
 > This contrasts nicely with the white on black generic header section (including navigation bar) and the black on white discount banner and footer.
-> The product, order and profile pages revert to a basic black on white in the body, with the use of a strong yellow/gold text for the product summary details.
-> For the Contacts and Gigs pages I've again used the red background to distinguish them as non-merchandise related pages.
+> The product, order, review and profile pages revert to a basic black on white in the body, with the use of a strong yellow/gold text for the product summary details.
+> For the Blogs, Contacts and Gigs pages I've again used the red background to distinguish them as non-merchandise related pages.
 > 
 > ### Typography
 >
@@ -273,6 +279,14 @@ The navigation bar changes depending on user status and screen size:
 | Home | &#9989; | &#9989; | &#9989; |
 | Products | &#9989; | &#9989; | &#9989; |
 | Product Details | &#9989; | &#9989; | &#9989; |
+| Add Products | &#10060; | &#10060; | &#9989; |
+| Add Reviews | &#10060; | &#9989; | &#9989; |
+| Edit Reviews | &#10060; | &#9989; | &#9989; |
+| Delete Reviews | &#10060; | &#9989; | &#9989; |
+| Add Blog Posts | &#10060; | &#10060; | &#9989; |
+| Edit Blog Posts | &#10060; | &#10060; | &#9989; |
+| Delete Blog Posts | &#10060; | &#10060; | &#9989; |
+| Add Comments to Posts | &#9989; | &#9989; | &#9989; |
 | Contact Us | &#9989; | &#9989; | &#9989; |
 | Upcoming Gigs | &#9989; | &#9989; | &#9989; |
 | Product Management | &#10060; | &#10060; | &#9989; |
@@ -315,7 +329,9 @@ The navigation bar changes depending on user status and screen size:
 
 - ## Future Features Left to Implement when time allows
 
-> - Expand the list of available pieces to incorporate pieces that belong to another band's library which we have permission to borrow, this would required amending the database schema include an extra music item status category of 'borrowed' which would hold extra fields denoting the band it has been borrowed from and the agreed time period that it has been borrowed for.
+> - Enhance the Product Review function to provide a star rating from 1 to 5.
+> - Enhance the Upcoming Gigs page to use a database of gigs events maintained by the administrator.
+> - Enable tickets to be paid for in advance for relevant gigs (including them in the shopping bag of items).
 
 ---
 
@@ -347,17 +363,17 @@ The navigation bar changes depending on user status and screen size:
 
 ## 2. Frameworks and Libraries Used
 
-> - [Django]
-> 
-
-> - [Flask](https://flask.palletsprojects.com/en/1.1.x/)
-> - [Flask-PyMongo](https://pypi.org/project/Flask-PyMongo/)
+> - [Django](https://www.djangoproject.com/)
+>
 > - [Pip3](https://pip.pypa.io/en/stable/)
+>
 > - [dnspython](https://www.dnspython.org/)
+>
 > - [jQuery](https://jquery.com/)
+>
 > - [Jinja](https://jinja.palletsprojects.com/en/3.0.x/)
-> - [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/)
-> - [Materialize](https://materializecss.com/)
+>
+> - [Bootstrap](https://getbootstrap.com/)
 >
 > - [FontAwesome](https://fontawesome.com/) - used on all pages throughout the website to add icons for aesthetic and UX purposes.
 
@@ -372,7 +388,7 @@ The navigation bar changes depending on user status and screen size:
 ## 4. Other
 
 > - [Heroku](https://www.heroku.com/) used to deploy live site
-> - [MongoDB](https://www.mongodb.com/) used to host database information.
+> - [PostgreSQL](https://www.postgresql.org/) used to host database information.
 > - [RandomKeygen](https://randomkeygen.com/) used to create a strong password for required  `<SECRET_KEY>`.
 > - [Lighthouse](https://developers.google.com/web/tools/lighthouse) for performance review.
 > - [Autoprefixer](https://autoprefixer.github.io/) Parses CSS and adds vendor prefixes.
@@ -464,7 +480,11 @@ Due to the size of the testing section, I have created a separate document for i
 > - [Code Institute](https://codeinstitute.net/) This website was made with the help of the tutorials from Code institute for the Boutique Ado project by Chris Zielinski. The code has been customised and improved to fit this project.
 > - Inspiration for user profile management and 'CRUD' processing from 'Boutique Ado' Mini-Project in Full Stack Development Module.
 > - Additional significant inspiration and coding techniques were gleaned from the following recent MS4 project for Code Institute :
->     Lead Shot Hazard by *Abi Harrison*    https://github.com/Abibubble/ms4-lead-shot-hazard
+>  - -   Lead Shot Hazard by *Abi Harrison*    https://github.com/Abibubble/ms4-lead-shot-hazard
+> - The rapid development of the Product Review and Blog apps to provide my 2 custom models was largely drawn (in terms of inspiration and logical useable code that I could understand and easily adapt) from the following recent MS4 projects for Code Institute :
+  * Inginuity by *Conac Breslin*    https://github.com/ConacBreslin/inginuity
+  * Stile by *Sophie Boyle*   https://github.com/sophieboyle1/stile-ms4
+  * Bubbles by *Gomathi Shankar*   https://github.com/gomathishankar28/ms4_bubbles
 >      
 > ## Media
 >
@@ -485,10 +505,10 @@ Due to the size of the testing section, I have created a separate document for i
 > - Numerous threads on the CI Slack channels plus a couple of significant Tutor Support sessions helped me understand and overcome the challenges of Django, Postgres, Heroku and AWS deployments.
 > - Naoise "Gaff" Gaffney for his info packed packed webinar on preparing for MS4.
 > - Django Documentation has been used to ensure correct syntax usage throughout the code.
-> - Stack Overflow has been used to help with deciphering the django error codes, and searching for bug fixes.
+> - Stack Overflow has been used to help with deciphering the Django error codes, and searching for bug fixes.
 >   These examples significantly helped me with formatting of the database schema / nav link accessibility table within features / deployment sections within this README.
 > - **CI staff** and **Slack Community** for always being on-hand with questions posted and assistance requests.
-> - A special call out goes to the CI Student Care team who have been very accommodating and motivational, especially on tmy last 2 projects (MS3 and MS4).
+> - A special call out goes to the CI Student Care team who have been very accommodating and motivational, especially on my last 2 projects (MS3 and MS4).
 > - Everyone that takes part in the Slack calls, specifically from the **#In-It-Together** and **#London Community** channels.
 
 # Support
