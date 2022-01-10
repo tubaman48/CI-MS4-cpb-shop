@@ -155,8 +155,6 @@ The following user stories were descoped early on in the project due to time con
 
 - ## 5. Surface
 
-> I've decided on the same colour scheme for the body of each separate page using appropriate icons alongside the title of the page to keep a sense of where you are on the site.
->
 > ### Colours
 >
 > The colour scheme is based around the "Crystal Palace Band" red jackets with the white and yellow on black band badges.
@@ -199,10 +197,14 @@ The following user stories were descoped early on in the project due to time con
   * Perform a keyword search for products by name and description.
   * Browse products by category through the main navigation bar.
   * Sort products
-    * Alphabetically (A-Z)
-    * Alphabetically (Z-A)
+    * Alphabetically (A-Z) on product name
+    * Alphabetically (Z-A) on product name
+    * Alphabetically (A-Z) on category name
+    * Alphabetically (Z-A) on category name
     * By price (low to high)
     * By price (high to low)
+    * By rating (low to high)
+    * By rating (high to low)
   * Click the 'Add to Bag' button for a faster shopping experience, including the ability to choose a size on products with sizes.
   * Click on a product card to view the full product details, including:
     * Name
@@ -210,7 +212,6 @@ The following user stories were descoped early on in the project due to time con
     * Price
     * Image
     * Description
-    * Audio (if relevant)
     * Sizes (if relevant)
   * Click the back to top arrow button to return to the top of the page.
 
@@ -227,7 +228,31 @@ The following user stories were descoped early on in the project due to time con
 
 ![Admin functionality to create and update products](static/docs/img/crud-feature.png)
 
-### Shopping bag
+### Product Reviews
+
+* This feature allows the user to:
+  * View all existing Product Reviews on the website.
+  * Add a new Product Review
+  * Sort Product Reviews
+    * Alphabetically (A-Z) on review author
+    * Alphabetically (Z-A) on review author
+    * Alphabetically (A-Z) on product name
+    * Alphabetically (Z-A) on product name
+    * Alphabetically (A-Z) on category name
+    * Alphabetically (Z-A) on category name
+    * Oldest to Newest on date posted
+    * Newest to Oldest on date posted
+
+### Blog Posts
+
+* This feature allows the Admin to:
+  * Add, Amend, Delete blog entries, allowing an upload of an image of their choice to make the blog stand out.
+* This feature allows users to:
+  * view the blog posts in summary form.
+  * click on a blog post to view the whole blog and any associated comments.
+  * add their own comments to individual blog posts.
+
+### Shopping Bag
 
 * This feature allows the user to:
   * Add products to the shopping bag.
@@ -396,6 +421,7 @@ The navigation bar changes depending on user status and screen size:
 > - [Website Page Test](https://www.webpagetest.org/) Runs a website speed test from multiple locations around the globe using real browsers (IE and Chrome) and at real consumer connection speeds.
 > - [Responsinator](http://www.responsinator.com/) Checks rendering across a variety of device types in landscape and portrait modes.  
 > - [Online-Spellcheck](https://www.online-spellcheck.com/) Online spelling and grammar checks.
+> - [DBDiagram](https://dbdiagram.io/home) used to generated the database schemma diagram.
 
 ## 5. IDE Extensions used in GitPod
 
@@ -459,8 +485,6 @@ Due to the size of the testing section, I have created a separate document for i
 # Version Control
 
 > - Used Git for version control.
-> - Branches were created to work on alternative fixes to issues encountered.
-> - The branches were then merged with the master branch after any conflicts were addressed.
 
 ---
 # Deployment
