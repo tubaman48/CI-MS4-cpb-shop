@@ -215,7 +215,7 @@ The following user stories were descoped early on in the project due to time con
   * Include images, either by URL or by uploading directly from the superuser's computer.
   * Include audio, by uploading directly from the superuser's computer.
 
-![Admin functionality to create and update products](static/docs/img/crud-feature.png)
+![Admin functionality to create and update products](static/docs/img/CRUD-feature.png)
 
 ### Product Reviews
 
@@ -232,6 +232,8 @@ The following user stories were descoped early on in the project due to time con
     * Oldest to Newest on date posted
     * Newest to Oldest on date posted
 
+![Reviews page](static/docs/img/reviews-feature.png)
+
 ### Blog Posts
 
 * This feature allows the Admin to:
@@ -240,6 +242,8 @@ The following user stories were descoped early on in the project due to time con
   * view the blog posts in summary form.
   * click on a blog post to view the whole blog and any associated comments.
   * add their own comments to individual blog posts.
+
+![Blog page](static/docs/img/blog-feature.png)
 
 ### Shopping Bag
 
@@ -283,8 +287,10 @@ The following user stories were descoped early on in the project due to time con
 ![Stripe's card information form, with a validation error showing](static/docs/img/payment-feature.png)
 
 
-#### Navigation bar
+### Navigation bar
 
+The navigation menu will help the user move easily across all pages. 
+The navigation buttons update depending on whether a user is logged in, and whether that user is the admin.
 The navigation bar changes depending on user status and screen size:
 
 | Nav Link | &#128683; | &#128100; | &#128272; |
