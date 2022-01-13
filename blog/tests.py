@@ -1,3 +1,4 @@
-from django.test import TestCase
+""" blog test """
 
-# Create your tests here.
+# No test models for blog app currently.
+# from django.test import TestCase

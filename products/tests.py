@@ -1,3 +1,4 @@
-from django.test import TestCase
+""" products test """
 
-# Create your tests here.
+# No test models for products app currently.
+# from django.test import TestCase

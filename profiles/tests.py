@@ -1,5 +1,4 @@
-""" profiles tests """
+""" profiles test """
 
-from django.test import TestCase
-
-# Create your tests here.
+# No test models for profiles app currently.
+# from django.test import TestCase

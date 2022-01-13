@@ -1,3 +1,4 @@
-from django.test import TestCase
+""" bag test """
 
-# Create your tests here.
+# No test models for bag app currently.
+# from django.test import TestCase

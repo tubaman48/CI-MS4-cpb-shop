@@ -1,3 +1,4 @@
-from django.test import TestCase
+""" reviews test """
 
-# Create your tests here.
+# No test models for reviews app currently.
+# from django.test import TestCase

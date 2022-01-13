@@ -1,3 +1,4 @@
-from django.test import TestCase
+""" checkout test """
 
-# Create your tests here.
+# No test models for checkout app currently.
+# from django.test import TestCase

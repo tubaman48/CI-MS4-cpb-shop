@@ -1,3 +1,4 @@
-from django.test import TestCase
+""" home test """
 
-# Create your tests here.
+# No test models for home app currently.
+# from django.test import TestCase
