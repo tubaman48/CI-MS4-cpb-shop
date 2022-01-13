@@ -10,7 +10,7 @@
 -   User Admin for maintaining user access
 -   Store Admin for maintaining details of products for sales plus their associated categories
 -   Passing consumers who wish to purchase without registering for a profile
--   More regular consumers who by registering via a profile will save time on reentering personal details and will be able to see their order history
+-   More regular consumers who by registering via a profile will save time on re-entering personal details and will be able to see their order history
 
 ![Image](/static/docs/img/CI-MS4-CPB-Shop_mock_up.png)
 
@@ -49,21 +49,10 @@
 # Description
 
 > The CPB Shop produced for this project is dedicated to enabling the Crystal Palace Band brand to reach out to a wider audience increasing awareness of it's existence.
-> The inital set of products available for virtual purchase via a test Stripe payment card establishes the basis for setting up a proper live commercial site for the band.
+> The initial set of products available for virtual purchase via a test Stripe payment card establishes the basis for setting up a proper live commercial site for the band.
 
 ---
 
-## Icon key
-
-&#128272; <-- Superuser only access
-
-&#128100; <-- Logged In Only
-
-&#128683; <-- Logged Out only
-
-&#9989; <-- Yes / Visible
-
-&#10060; <-- No / Not visible
 
 [Back to the top](#CPB-Shop-Website)
 
@@ -320,6 +309,19 @@ The navigation bar changes depending on user status and screen size:
 | Log In | &#9989; | &#10060; | &#10060; |
 | Register | &#9989; | &#10060; | &#10060; |
 
+##### Icon key
+
+&#128272; <-- Superuser only access
+
+&#128100; <-- Logged In Only
+
+&#128683; <-- Logged Out only
+
+&#9989; <-- Yes / Visible
+
+&#10060; <-- No / Not visible
+
+
 * Navigation bar
 
 ![Overall navigation bar](static/docs/img/nav-overall.png)
@@ -421,7 +423,7 @@ The navigation bar changes depending on user status and screen size:
 > - [Website Page Test](https://www.webpagetest.org/) Runs a website speed test from multiple locations around the globe using real browsers (IE and Chrome) and at real consumer connection speeds.
 > - [Responsinator](http://www.responsinator.com/) Checks rendering across a variety of device types in landscape and portrait modes.  
 > - [Online-Spellcheck](https://www.online-spellcheck.com/) Online spelling and grammar checks.
-> - [DBDiagram](https://dbdiagram.io/home) used to generated the database schemma diagram.
+> - [DBDiagram](https://dbdiagram.io/home) used to generated the database schema diagram.
 
 ## 5. IDE Extensions used in GitPod
 
@@ -437,15 +439,15 @@ The navigation bar changes depending on user status and screen size:
 # Resources
 
 > - [Code Institute Course Content](https://courses.codeinstitute.net/) - Main source of fundamental knowledge.
-> - Code Institute **SLACK Community** - Main source of assistance, especially the **JimLynx** webinar on the "Introduction to Git Workflow" which made the process of adding, committing and pushing in gitpod so much smoother.
+> - Code Institute **SLACK Community** - Main source of assistance, especially the **JimLynx (aka Jim Morel)** webinar on the "Introduction to Git Workflow" which made the process of adding, committing and pushing in gitpod so much smoother.
 > - [Stack Overflow](https://stackoverflow.com/) - General resource.
 > - [Youtube](https://www.youtube.com/) - General resource.
 > - [CSS-Tricks](https://css-tricks.com/) - General resource.
 > - [W3.CSS](https://www.w3schools.com/w3css/4/w3.css) - General resource.
 > - [CommonMark](https://commonmark.org/help/) - For Markdown language reference.
-> - [Coolors](https://coolors.co/) - Find matching color palette for site.
+> - [Coolors](https://coolors.co/) - Find matching colour palette for site.
 > - [TinyPNG](https://tinypng.com/) - Efficient compression of images for site.
-> - [Am I Responsive](http://ami.responsivedesign.is/) - Responsive website mockup image generator.
+> - [Am I Responsive](http://ami.responsivedesign.is/) - Responsive website mock up image generator.
 > - [Balsamiq](https://balsamiq.com/wireframes/) - Wireframing design tool.
 ---
 
@@ -457,7 +459,7 @@ Due to the size of the testing section, I have created a separate document for i
 
 ### Solved Bugs
 1. 	Stripe webhook failures 
-    The following sequence started off with an HTTP 401 error, which progressed via an HTTP 400 error and HTTP 500 error before fully resolving with 200 succcess message.
+    The following sequence started off with an HTTP 401 error, which progressed via an HTTP 400 error and HTTP 500 error before fully resolving with 200 success message.
     This occurred before the deployment to Heroku whilst testing via a local 8000 port :
 
     • HTTP 401 (Not Authorised) caused by Stripe webhook URL becoming invalid due to gitpod workspace server element changing.
@@ -527,10 +529,10 @@ Due to the size of the testing section, I have created a separate document for i
 > - My mentor, Antonio Rodriguez, at Code Institute, for continuous helpful feedback and support.
 > - The team at Code Institute, for teaching me the necessary skills to create this site.
 > - Numerous threads on the CI Slack channels plus a couple of significant Tutor Support sessions helped me understand and overcome the challenges of Django, Postgres, Heroku and AWS deployments.
-> - Naoise "Gaff" Gaffney for his info packed packed webinar on preparing for MS4.
+> - Naoise "Gaff" Gaffney for his info packed webinar on preparing for MS4.
 > - Django Documentation has been used to ensure correct syntax usage throughout the code.
 > - Stack Overflow has been used to help with deciphering the Django error codes, and searching for bug fixes.
->   These examples significantly helped me with formatting of the database schema / nav link accessibility table within features / deployment sections within this README.
+>   These examples significantly helped me with formatting of the database schema / navigation link accessibility table within features / deployment sections within this README.
 > - **CI staff** and **Slack Community** for always being on-hand with questions posted and assistance requests.
 > - A special call out goes to the CI Student Care team who have been very accommodating and motivational, especially on my last 2 projects (MS3 and MS4).
 > - Everyone that takes part in the Slack calls, specifically from the **#In-It-Together** and **#London Community** channels.
